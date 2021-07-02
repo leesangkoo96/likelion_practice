@@ -142,22 +142,3 @@ MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-#AWS
-
-AWS_ACCESS_KEY_ID = os.environ.get(
-    'AWS_ACCESS_KEY_ID', 'AKIAR5A2FBHJG5WK2RNX'
-)
-
-AWS_SECRET_ACCESS_KEY = os.environ.get(
-    'AWS_SECRET_ACCESS_KEY', 'cjZQkT4gMXsBFpNqrbGBhdsGEIzbHBHKjL6C4Dcu'
-)
-
-AWS_STORAGE_BUCKET_NAME = os.environ.get(
-    'AWS_STORAGE_BUCKET_NAME', 'likelion-ideaton'
-)
-
-import dj_database_url 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
