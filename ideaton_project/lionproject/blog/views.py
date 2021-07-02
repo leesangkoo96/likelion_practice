@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404 #get_object_or_404 : 찾을 수 없을경우 404를 띄어준다.
 from django.utils import timezone # pub_date를 표현하기위하여
 from .models import Blog
-from .forms import BlogForm, BlogForm_E
+from .forms import BlogForm
 
 
 # Create your views here.
