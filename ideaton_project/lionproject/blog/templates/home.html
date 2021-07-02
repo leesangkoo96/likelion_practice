@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+    <h1>Blog Project</h1>
+    <!--{{blogs}}--> <!-- Query set 즉, 리스트와 같은 형태로 웹에 불러와짐. Query set은 전달받은 모델의 객체 목록을 의미함.-->
+    <div>
+        <a href="{% url 'new' %}">Write blog</a>
+    </div>
+    {% for blog in blogs %}<!-- for문을 통해 객체 하나하나를 표현-->
+    <div class="container">
+        <!-- {{blog.id}} -->
+        <h3>{{blog.title}}</h3>
+        {{blog.writer}}<br>
+        {{blog.summary}} <a href="{% url 'detail' blog.id %}">...more</a>
+    </div>
+    {% endfor %}
+{% endblock %}
