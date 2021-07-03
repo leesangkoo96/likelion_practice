@@ -1,0 +1,700 @@
+    article {
+        display: flex;
+        flex-direction: column;
+    } 
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-image: url("배경이미지/그림자군도.jpg");
+        background-attachment: fixed;  /* 스크롤했을때 배경이미지는 움직이지 않는다. */
+        background-size: cover;
+    }
+    /* .body {
+        background-image: url("배경이미지/그림자군도.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        margin: 0 auto;
+    } */
+
+    .start{
+        color: white;
+    }
+    .result {
+        background-color : rgb(0, 19, 31, 0.98);
+        color: gold;
+    } 
+    .progress-bar{
+        /* background: radial-gradient(ellipse, rgba(97, 93, 93, 0.5), rgba(128, 128, 128, 1.0));  */
+        background: radial-gradient(ellipse, rgba(255, 255, 255, 0.4), rgba(169,169,169, 0.9)); 
+    }
+    .question_bar{
+        border: none;
+        margin-top: 50px;
+        border-radius: 20px;
+        font-family: Stylish;
+        font-size: 13px;
+        font-weight: lighter;
+        /* background: gray; */
+        background: radial-gradient(ellipse, rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 1.0)); 
+        border: none;
+        width:100%;
+        height: 5rem;
+        color: white;
+    }
+
+    /* .question_bar:hover{
+        background-color: rosybrown;
+        background-color: skyblue;
+        width: 100%;
+        height: 5rem;
+    } */
+    .question_bar_2{
+        margin-top: 25px;
+        border-radius: 20px;
+        font-family: Stylish;
+        font-size: 13px;
+        font-weight: lighter;
+        background: radial-gradient(ellipse, rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 1.0)); 
+        border: none;
+        height: 80px;
+        color:white;
+    }
+
+    /* .question_bar_2:hover {
+        background-color: rosybrown;
+        background-color: skyblue;
+        width: 100%;
+        height: 5rem;
+    } */
+
+    .pc_start_button{
+        border: 1px solid darkgray;
+        /* background: linear-gradient(10deg, darkgray, white); */
+        background: radial-gradient(ellipse, rgba(255, 255, 255, 0.7), rgba(128, 128, 128, 1.0)); 
+        /* background: gray; */
+        border-radius: 20px;
+        font-family: Shadows Into Light;
+        font-weight: 500;
+        font-size: 30px;
+        width: 200px;
+        height: 70px;
+        margin: 0 auto;
+        margin-top: 50px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .pc_start_button:hover{
+        background-color: skyblue;
+    }
+    .start_button{
+        border: 1px solid darkgray;
+        /* background: linear-gradient(10deg, darkgray, white); */
+        background: radial-gradient(ellipse, rgba(255,255,255, 0.7), rgba(128, 128, 128, 1.0)); 
+        /* background: gray; */
+        border-radius: 20px;
+        font-family: Shadows Into Light;
+        font-weight: 500;
+        font-size: 30px;
+        width: 200px;
+        height: 70px;
+        margin: 0 auto;
+        margin-top: 20px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .start_button:hover{
+        background-color: skyblue;
+    }
+  
+
+    .pc_start_button_center{
+        margin: 0 auto;
+    }
+    /* .next_button2{
+        display: flex;
+        margin: 0 auto;
+        background-color: rgba(255,215,0, 0.1);
+        border: solid 1px rgba(255,215,0, 0.1);
+        border-radius: 10px;
+        width: 200px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+    } */
+    /* .next_button3{
+        display: flex;
+        margin: 0 auto;
+        background-color: gold;
+        border: solid 1px gold;f
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+    } */
+    .question {
+        display: none;
+    }
+
+    .go{
+        display: none;
+        border: 1px solid darkgray;
+        /* background: linear-gradient(10deg, darkgray, white); */
+        background: radial-gradient(ellipse, rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 1.0)); 
+        /* background: gray; */
+        border-radius: 20px;
+        width: 200px;
+        height: 70px;
+        margin: 0 auto;
+        margin-top: 50px;
+        color: white;
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    .result {
+        display: none;
+    }
+    .head_m_explain{
+        text-align: center;
+    }
+    .add_img{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .add_img img{
+        margin-top: 10px;
+        object-fit: cover;
+        width: 110px;
+        height: 170px;
+        border-radius: 30px;
+        margin-right: 10px;
+    }
+
+    .part_1{
+        text-align: center;
+    }
+    
+    .part_2{
+        font-family: Nanum Brush Script;
+    }
+
+    .part3{
+        font-family: Nanum Brush Script;
+    }
+
+    .important{
+        /* display:none; */
+        margin: auto;
+        width: 80%;
+        margin-top: 50px;
+        font-size: 12px;
+    }
+
+    .legends{
+        visibility:hidden;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    #title {
+        margin-top: 20px;
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+        font-family: stylish;
+        line-height: 22px;
+    }
+    .test{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-family: East Sea Dokdo;  
+    }
+    /* #test_1 {
+        
+        font-size: 1.3rem;
+        text-align: center;
+    } */
+    #test{
+        margin-top: 50px;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    #test_2 {
+        font-weight: 550;
+        margin-top: 0px;
+        font-size: 40px;
+        text-align: center;
+    }
+    #test_3 {
+        margin-top: 10px;
+        font-size: 20px;
+        text-align: center;
+    }
+    #img {
+        display: flex;
+        object-fit: cover;
+        width: 90%;
+        height: 250px;
+        border-radius: 50px;
+        /* border-top-right-radius: 20px;
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px; */
+        margin : 0 auto; /*가운데정렬*/
+        margin-top : 10px;
+    }
+
+    /* #img_2 {
+        
+        width: 150px;
+        object-fit: cover;
+        border-radius: 20px; 
+        position: relative;
+        
+    }
+
+    #img_3 {
+        
+        width: 150px;
+        object-fit: cover;
+        border-radius: 20px; 
+        margin-left: 1.3rem;
+        position: relative;
+        
+    }
+
+    #img_4 {
+        
+        width: 150px;
+        object-fit: cover;
+        border-radius: 20px; 
+        margin-left: 1.3rem;
+        position: relative;
+        
+    } */
+
+
+
+    #MBTI {
+        /* margin: 0 auto; */
+        margin-top: 20px;
+        font-family: Nanum Brush Script;
+        font-size: 27px;
+        /* text-align: left; */
+    }
+
+    #nickname {
+        margin-top: 0px;
+        font-family: Nanum Brush Script;
+        font-size: 30px;
+        font-weight: 700;
+        /* margin: 0 auto; */
+    }
+
+    #champ {
+        margin-top : -12px; /* p{margin:위,오,아,왼} 
+                        ex): p{margin:5px, 0, 0, 0} 해도 똑같다.*/
+        font-family: Nanum Brush Script;
+        font-size: 23px;
+        /* margin: 0 auto; */
+        font-weight:400;
+        
+    }
+
+    #lines{
+        color: gold;
+        font-size: 40px;
+        font-family: east sea dokdo;
+        font-style: italic;
+        margin-top: 30px;
+        font-weight:520;
+    }
+
+
+    #explain {
+        margin-top : 15px;
+        /* border-left: 2mm solid rgb(170, 50, 220, 0.7);  */
+        /* 색깔을 지정하는 3가지 지정이 지나고 나서 0.0~1.0까지 선명도를 지정할 수 있다. */
+        width: 100%;
+        font-size: 11px;
+        font-style: italic;
+        font-family: Nanum Brush Script;
+        font-weight: 1000;
+        text-align: center;
+        line-height: 150%;
+        color: rgba(255,215,0, 0.7);
+    }
+
+    #explain_last {
+        font-size: 20px;
+        font-weight: 1000;
+        line-height: 160%;
+        color: rgba(255,215,0, 0.7);
+        text-align: center;
+    }
+
+    #head_m_explain{
+        margin: 0 auto;
+    }
+    #mbti_m_explain{
+        color: gold;
+        margin-top: 25px;
+        font-size: 25px;
+        /* font-family: Nanum Brush Script; */
+        font-weight: 600;
+    }
+    #name_m_explain{
+        color: gold;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        font-size: 25px;
+    }
+    #ex_m_explain{
+        color: gold;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    #m_explain {
+        margin: 0 auto;
+        padding: 0px;
+        margin-top: 50px;
+        width: 90%;
+        height: auto;
+        /* border-top: solid rgba(0,0,0,0.5);
+        border-bottom: solid rgba(0,0,0,0.5); */
+        border-left: dashed rgba(255,215,0,0.5);
+        border-right: dashed rgba(255,215,0,0.5);
+        /* text-indent: 0px; */
+        font-size: 15px;
+        font-weight: lighter;
+        line-height: 180%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #m_explain_last {
+        margin-top: 50px;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    #add_image_head {
+        margin-top: 30px;
+        font-size : 25px;
+        font-weight: 400;
+        font-family: Nanum Brush Script;
+        text-align: center;
+    }
+
+    .share {
+        width:100%;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .share::before {
+        content: "- 친구들과 공유하고 결과를 비교해보세요! -";
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-family: Nanum Brush Script;
+        font-size: 20px;
+    }
+
+    #next_button{
+        display: flex;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 200px;
+        height: 80px;
+    }
+
+    #retry{
+        display: flex;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .retry{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 23px;
+        font-weight: 600;
+    }
+
+    .kakao_ad{
+        margin: 0 auto;
+        margin-top: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .kakao_ad2{
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+    }
+    .kakao_ad_result{
+        margin: auto;
+        margin-top: 50px;
+        width: 330px;
+    }
+    #audio{
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    /* 로딩 */
+    .blur {
+        filter: blur(5px);
+    }
+    .analyze-wrapper {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0; 
+        left: 0;
+        background: transparent;    /* 미리 다른 배경 색상이 설정되어 있을 경우 filter 메서드와 충돌할 가능성이 있기 때문에 적용해준다. */
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s ease-in;
+        /* ease-in: 처음에는 느리게, 끝에서는 빠르다 / 갑작 스럽습니다.
+        ease-out: 처음에는 빠르다 / 갑작스럽고 끝에서 느리게
+        ease-in: 물건이 움직일 때 .
+        ease-out: 상황이 이동하는 경우 에 . */
+        z-index: 1;
+    }
+    .analyze-wrapper.open { 
+        opacity: 1;
+        visibility: visible;
+    }
+    .analyze {
+        width: 400px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: -200px;
+        background: darkgray;
+        opacity: 0;
+        transition: all 0.5s ease-in;
+        border-radius: 20px;
+    }
+        
+    .analyze-wrapper.open .analyze {
+        margin-top: 50px;
+        opacity: 1;
+    }
+
+
+    .loading {
+         margin: 0 auto;
+        margin-top: 20px;
+    }
+    #loading_img{
+        /* border-top-left-radius: 20px;
+        border-top-right-radius: 20px; */
+        border-radius: 20px;
+        width: 350px;
+        height:250px;
+        object-fit: cover;
+    }
+    #spinner{
+        margin-top: 30px;
+    }
+    .loading-msg {
+        text-align: center;
+        font-size: 25px;
+        color: black;
+    }
+
+    
+
+    @media screen and (min-width: 800px){ /* 피시화면에서 보일때 */
+        .question_bar{
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 20px;
+            font-size: 20px;
+            width: 700px;
+            height: 100px;
+        }
+
+        .question_bar_2{
+            margin: auto;
+            margin-top: 30px;
+            border-radius: 20px;
+            font-size: 20px;
+            width: 700px;
+            height: 100px;
+        }
+        .pc_start_button{
+            margin: 0 auto;
+            margin-top: 30px;
+            border-radius: 30px;
+            font-size: 40px;
+            font-weight: 600;
+            font-family: Shadows Into Light;
+            width: 250px;
+            height: 100px;
+        }
+        
+        .start_button{
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-radius: 30px;
+            font-size: 40px;
+            font-weight: 600;
+            font-family: Shadows Into Light;
+            width: 250px;
+            height: 100px;
+        }
+        .test{
+            font-family: East Sea Dokdo;        
+        }
+        #test{
+            margin-top: 50px;
+            font-size: 40px;
+            font-weight: 500;
+        }
+        #test_2 {
+            font-weight: 550;
+            margin-top: 20px;
+            font-size: 100px;   
+            text-align: center;
+        }
+        #test_3 {
+            margin-top: 10px;
+            margin-bottom: 50px;
+            font-size: 30px;
+            font-family: Gamja Flower;
+            text-align: center;
+        }
+        #title {
+            margin: auto;
+            margin-top: 50px;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 160%;
+            width: 80%;
+        }
+        #img {
+            width: 70%;
+            height: 500px;
+            border-radius: 50px;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+        }
+        #explain {
+            width: 100%;
+            font-size: 25px;
+            font-style: italic;
+            font-family: Nanum Brush Script;
+            font-weight: 500;
+            text-align: center;
+            line-height: 150%;
+            color: rgba(255,215,0, 0.7);
+        }
+        #mbti_m_explain{
+            margin-top: 25px;
+            font-size: 50px;
+            /* font-family: Nanum Brush Script; */
+            font-weight: 600;
+        }
+        #name_m_explain{
+            margin-top: 15px;
+            font-size: 40px;
+        }
+        #ex_m_explain{
+            margin-top: 5px;
+            font-size: 25px;
+        }
+        #m_explain {
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 55%;
+            height: auto;
+            /* border-top: solid rgba(0,0,0,0.5);
+            border-bottom: solid rgba(0,0,0,0.5); */
+            border-left: dashed rgba(255,215,0,0.5);
+            border-right: dashed rgba(255,215,0,0.5);
+            /* text-indent: 0px; */
+            font-size: 25px;
+            font-weight: lighter;
+            line-height: 180%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    
+        #m_explain_last {
+            margin-top: 50px;
+            font-size: 40px;
+            font-style: italic;
+            font-weight: 600;
+            text-align: center;
+        }    
+        .share {
+            width:100%;
+            margin: 0 auto;
+            margin-top: 70px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    
+        .share::before {
+            content: "- 친구들과 공유하고 결과를 비교해보세요! -";
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-family: Nanum Brush Script;
+            font-size: 40px;
+        }
+    
+        #next_button{
+            display: flex;
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 300px;
+            height: 120px;
+        }
+    
+        #retry{
+            display: flex;
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+        }
+    
+        .retry{
+            margin: 0 auto;
+            text-align: center;
+            font-size: 23px;
+            font-weight: 600;
+        }
+        #add_image_head{
+            font-size: 30px;
+        }
+        .add_img img{
+            margin-top: 30px;
+            object-fit: cover;
+            width: 200px;
+            height: 250px;
+            border-radius: 30px;
+            margin-right: 10px;
+        }
+    }

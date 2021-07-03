@@ -1,0 +1,381 @@
+article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    background-image: url("배경이미지/그림자군도.jpg");
+    background-size: 100% 100%;
+}
+.start{
+    color: white;
+}
+.result {
+    background-color : rgb(0, 19, 31, 0.98);
+    color: gold;
+} 
+.progress-bar{
+    /* background: radial-gradient(ellipse, rgba(97, 93, 93, 0.5), rgba(128, 128, 128, 1.0));  */
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.3), rgba(16, 62, 85)); 
+}
+.question_bar{
+    border: none;
+    margin-top: 10%;
+    border-radius: 1.7rem;
+    font-family: 'BenchNine', Arial, sans-serif;
+    font-size: 13px;
+    /* background: gray; */
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.4), rgba(255,255,240, 0.4)); 
+    border: 1px solid rgba(16, 62, 85);
+    width:100%;
+    height: 5rem;
+    color: white;
+}
+
+.question_bar:hover{
+    /* background-color: rosybrown; */
+    background-color: skyblue;
+    width: 100%;
+    height: 5rem;
+}
+.question_bar_2{
+    margin-top: 5%;
+    border-radius: 20px;
+    font-family: 'BenchNine', Arial, sans-serif;
+    font-size: 13px;
+    /* background: gray;  */
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 1.0)); 
+    border: 1px solid darkgray;
+    height: 5rem;
+    color:white;
+}
+
+.question_bar_2:hover {
+    /* background-color: rosybrown; */
+    background-color: skyblue;
+    width: 100%;
+    height: 5rem;
+}
+
+.start_button{
+    border: 1px solid darkgray;
+    /* background: linear-gradient(10deg, darkgray, white); */
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 1.0)); 
+    /* background: gray; */
+    border-radius: 20px;
+    font-family: 'BenchNine', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    width: 200px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.start_button:hover{
+    background-color: skyblue;
+}
+.pc_start_button{
+    border: 1px solid darkgray;
+    /* background: linear-gradient(10deg, darkgray, white); */
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 1.0)); 
+    /* background: gray; */
+    border-radius: 20px;
+    font-family: 'BenchNine', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    width: 200px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.pc_start_button:hover{
+    background-color: skyblue;
+}
+
+.pc_start_button_center{
+    margin: 0 auto;
+}
+.next_button2{
+    background-color: gold;
+    border: solid 1px gold;
+    border-radius: 10px;
+    width: 70px;
+    height: 50px;
+}
+.next_button3{
+    display: flex;
+    margin: 0 auto;
+    background-color: gold;
+    border: solid 1px gold;
+    border-radius: 10px;
+    width: 70px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.question {
+    display: none;
+}
+
+.go{
+    display: none;
+    border: 1px solid darkgray;
+    /* background: linear-gradient(10deg, darkgray, white); */
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 1.0)); 
+    /* background: gray; */
+    border-radius: 20px;
+    width: 200px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: white;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.result {
+    display: none;
+}
+.head_m_explain{
+    text-align: center;
+}
+.add_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add_img img{
+    margin-top: 10px;
+    object-fit: cover;
+    width: 25%;
+    height: 200px;
+    border-radius: 30px;
+    margin-right: 1rem;
+  }
+
+.part_1{
+    text-align: center;
+}
+
+
+.important{
+    /* display:none; */
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 3rem;
+    font-size: 10px;
+}
+
+
+#title {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+#test_1 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+#test_2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+#test_3 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+#img {
+    display: flex;
+    object-fit: cover;
+    width: 90%;
+    height: auto;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin : 0 auto; /*가운데정렬*/
+    margin-top : 0px;
+}
+
+/* #img_2 {
+    
+    width: 150px;
+    object-fit: cover;
+    border-radius: 20px; 
+    position: relative;
+    
+}
+
+#img_3 {
+    
+    width: 150px;
+    object-fit: cover;
+    border-radius: 20px; 
+    margin-left: 1.3rem;
+    position: relative;
+    
+}
+
+#img_4 {
+    
+    width: 150px;
+    object-fit: cover;
+    border-radius: 20px; 
+    margin-left: 1.3rem;
+    position: relative;
+    
+} */
+
+
+
+#MBTI {
+    /* margin: 0 auto; */
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    /* text-align: left; */
+}
+
+#nickname {
+    font-size: 30px;
+    font-weight: 550;
+    /* margin: 0 auto; */
+    margin-top: 25px;
+    /* text-align: left; */
+}
+
+#champ {
+    font-size: 30px;
+    /* margin: 0 auto; */
+    margin-top : 0px; /* p{margin:위,오,아,왼} 
+                    ex): p{margin:5px, 0, 0, 0} 해도 똑같다.*/
+    /* text-align : center; */
+    font-weight:400;
+    
+}
+
+#lines{
+    color: gold;
+    font-size: 25px;
+    margin-top: 30px;
+    font-weight:520;
+}
+
+
+#explain {
+    margin-top : 20px;
+    /* border-left: 2mm solid rgb(170, 50, 220, 0.7);  */
+    /* 색깔을 지정하는 3가지 지정이 지나고 나서 0.0~1.0까지 선명도를 지정할 수 있다. */
+    width: 100%;
+    font-size: 1vw;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+    font-weight: 1000;
+    text-align: center;
+    line-height: 150%;
+    color: rgba(255,215,0, 0.7);
+}
+
+#explain_last {
+    font-size: 1.6rem;
+    font-weight: 1000;
+    line-height: 160%;
+    color: rgba(255,215,0, 0.7);
+    text-align: center;
+}
+
+#head_m_explain{
+    margin: 0 auto;
+}
+#mbti_m_explain{
+    color: gold;
+    margin-top: 25px;
+    font-size: 25px;
+    font-weight: 600;
+}
+#name_m_explain{
+    color: gold;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-size: 25px;
+}
+#ex_m_explain{
+    color: gold;
+    margin-top: 5px;
+    font-size: 15px;
+}
+#m_explain {
+    margin: 0 auto;
+    padding: 0px;
+    margin-top: 50px;
+    width: 90%;
+    height: auto;
+    /* border-top: solid rgba(0,0,0,0.5);
+    border-bottom: solid rgba(0,0,0,0.5); */
+    border-left: dashed rgba(255,215,0,0.5);
+    border-right: dashed rgba(255,215,0,0.5);
+    /* text-indent: 0px; */
+    font-size: 15px;
+    font-weight: lighter;
+    line-height: 180%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#m_explain_last {
+    margin-top: 50px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+}
+
+#add_image_head {
+    margin-top: 100px;
+    font-size : 22px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.share {
+    width:100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.share::before {
+    content: "친구들과 공유하고 결과를 비교해보세요!";
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+  }
+
+
+#retry{
+    display:flex;
+    margin: 0 auto;
+    object-fit: fill;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+.retry{
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    width: 100px;
+    height: 50px;
+}
+
+.kakao_ad{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+

@@ -1,0 +1,628 @@
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 용기의 전당 */   /* 나보리의 플레시디엄 */    /*빛의 신전 */   /*슈리마*/
+ /*중심 분화구 */ /* 파괴된 비밀의 회랑 */
+ /* 도살자의 다리 */ /*빌지워터 만*/ /* 새로운 시작*/ /*학살의 부두*/
+ /* 경계구역시장 */ /* 브리더역 */ /*자운 거리*/
+/* 기이한 문양 */ /* 도약의 길 */ /* 돌에 새긴 문자*/ /* 라코어 부족의 집 */ /* 사계절 */
+/* 냉기의 화신 회랑*/ /* 라켈 스테이크의 순례지 */ /* 칼바람 나락으로 들어가는 관문 */ /* 칼바람 나락의 얼어붙은 동굴*/
+body {
+    background-image: url("배경이미지/그림자군도.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.start{
+    color: white;
+}
+.result {
+    background-color : rgb(0, 19, 31, 0.8);
+    /* background-image:url("배경이미지/그림자군도.jpg"); */
+    color: gold;
+    font-family: Nanum Brush Script;
+} 
+.progress-bar{
+    /* background: radial-gradient(ellipse, rgba(97, 93, 93, 0.5), rgba(128, 128, 128, 1.0));  */
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.4), rgba(169,169,169, 0.9)); 
+}
+.question_bar{
+    border: none;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    font-family: Stylish;
+    font-size: 20px;
+    font-weight: lighter;
+    /* background: gray; */
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 1.0)); 
+    border: none;
+    width: 800px;
+    height: 100px;
+    color: white;
+}
+
+.question_bar:hover{
+    /* background-color: rosybrown; */
+    background-color: rgba(135,206,235, 0.5);
+    width: 800px;
+    height: 100px;
+}
+.question_bar_2{
+    border: none;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    font-family: Stylish;
+    font-size: 20px;
+    font-weight: lighter;
+    /* background: gray; */
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 1.0)); 
+    border: none;
+    width: 800px;
+    height: 100px;
+    color: white;
+}
+
+.question_bar_2:hover {
+    /* background-color: rosybrown; */
+    background-color: rgba(135,206,235, 0.5);
+    width: 800px;
+    height: 100px;
+}
+.start_button{
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Shadows Into Light;
+    width: 250px;
+    height: 100px;
+    border: 1px solid darkgray;
+    /* background: linear-gradient(10deg, darkgray, white); */
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 1.0)); 
+    /* background: gray; */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.start_button:hover{
+    background-color: skyblue;
+}
+
+.m_start_button{
+    border: 1px solid darkgray;
+    /* background: linear-gradient(10deg, darkgray, white); */
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 1.0)); 
+    /* background: gray; */
+    border-radius: 20px;
+    font-family: Shadows Into Light;
+    font-weight: 600;
+    font-size: 40px;
+    width: 250px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.m_start_button:hover{
+    background-color: skyblue;
+}
+.m_start_button_center{
+    margin: 0 auto;
+}
+.question {
+    display: none;
+}
+
+.go{
+    display: none;
+    border: 1px solid darkgray;
+    /* background: linear-gradient(10deg, darkgray, white); */
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 1.0)); 
+    /* background: gray; */
+    border-radius: 20px;
+    width: 200px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: white;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.result {
+    display: none;
+}
+.add_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add_img img{
+    margin-top: 15px;
+    object-fit: cover;
+    width: 22%;
+    height: 300px;
+    border-radius: 30px;
+    margin-right: 1rem;
+  }
+.explain{
+    margin: 0 auto;
+    /* border-left: 2mm solid rgb(170, 50, 220, 0.7);  */
+    /* 색깔을 지정하는 3가지 지정이 지나고 나서 0.0~1.0까지 선명도를 지정할 수 있다. */
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-family: Nanum Brush Script;
+    font-weight: 1000;
+    text-align: center;
+    line-height: 150%;
+    /* color:rgba(0, 0, 0 , 0.4) */
+    color: rgba(255, 217, 0, 0.7);
+}
+
+
+
+.important{
+    /* display:none; */
+    margin: 0 auto;
+    width: 65%;
+    margin-top: 50px;
+    font-size: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.jocoding{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#jocoding{
+    margin-bottom: -25px;
+}
+#title {
+    margin: auto;
+    margin-top: 50px;
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: stylish;
+    line-height: 160%;
+    width: 80%;
+}
+
+    
+.test{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: East Sea Dokdo;  
+}
+/* #test_1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+} */
+#test{
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 500;
+}
+#test_2 {
+    font-weight: 550;
+    margin-top: 20px;
+    font-size: 100px;   
+    text-align: center;
+}
+#test_3 {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-family: Gamja Flower;
+    text-align: center;
+}
+#img {
+    display: flex;
+    object-fit: cover;
+    width: 75%;
+    height: auto;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin : 0 auto; /*가운데정렬*/
+    margin-top : 15px;
+}
+
+
+
+/* #img_2 {
+    
+    width: 150px;
+    object-fit: cover;
+    border-radius: 20px; 
+    position: relative;
+    
+}
+
+#img_3 {
+    
+    width: 150px;
+    object-fit: cover;
+    border-radius: 20px; 
+    margin-left: 1.3rem;
+    position: relative;
+    
+}
+
+#img_4 {
+    
+    width: 150px;
+    object-fit: cover;
+    border-radius: 20px; 
+    margin-left: 1.3rem;
+    position: relative;
+    
+} */
+
+
+#introduction{
+    margin-top: 20px;
+    text-align:center;
+}
+#MBTI {
+    /* margin: 0 auto; */
+    margin-top: 25px;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: Nanum Brush Script;
+    /* text-align: left; */
+}
+
+#nickname {
+    margin-top: 10px;
+    font-family: Nanum Brush Script;
+    font-size: 50px;
+    font-weight: 500;
+    /* margin: 0 auto; */
+}
+
+#champ {
+    font-size: 35px;
+    font-family: Nanum Brush Script;
+    /* margin: 0 auto; */
+    margin-top : -15px; /* p{margin:위,오,아,왼} 
+                    ex): p{margin:5px, 0, 0, 0} 해도 똑같다.*/
+    /* text-align : center; */
+    font-weight:400;
+    
+}
+
+#lines{
+    color: gold;
+    font-size: 60px;
+    font-family: Nanum Brush Script;
+    font-style: italic;
+    margin-top: 40px;
+    font-weight:550;
+}
+.head_m_explain{
+    text-align: center;
+    margin-top: 150px;
+    font-family: Nanum Brush Script;
+}
+#head_m_explain{
+    font-size: 50px;
+}
+#head_m_explain2{
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 600;
+}
+#head_m_explain3{
+    font-size: 35px;
+}
+
+#explain {
+    margin: 0 auto;
+    margin-top : 50px;
+    /* border-left: 2mm solid rgb(170, 50, 220, 0.7);  */
+    /* 색깔을 지정하는 3가지 지정이 지나고 나서 0.0~1.0까지 선명도를 지정할 수 있다. */
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    font-style: italic;
+    font-family: Nanum Brush Script;
+    text-align: center;
+    line-height: 160%;
+    /* color:rgba(0, 0, 0 , 0.4) */
+    color: rgba(255,215,0, 0.7);
+}
+
+#explain_last {
+    font-size: 40px;
+    font-weight: 1000;
+    line-height: 160%;
+    color: gold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#m_explain {
+    margin: 0 auto;
+    padding: 0px;
+    margin-top: 40px;
+    width: 75%;
+    height: auto;
+    /* border-top: solid rgba(0,0,0,0.5);
+    border-bottom: solid rgba(0,0,0,0.5); */
+    border-left: dashed rgba(255,215,0.7);
+    border-right: dashed rgba(255,215,0.7);
+    /* text-indent: 20px; */
+    font-size: 27px;
+    font-weight: 100;
+    line-height: 180%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#m_explain_last {
+    margin-top: 70px;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+}
+
+#add_image_head {
+    margin-top: 100px;
+    font-size : 50px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.share {
+    width:100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.share::before {
+    content: "친구들과 공유하고 결과를 비교해보세요!";
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-family: Nanum Brush Script;
+    font-size: 40px;
+  }
+
+
+.link_retry{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+}  
+#retry{
+    
+    display:flex;
+    width: 200px;
+    height: 200px;
+}
+
+.retry{
+    text-align: center;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.kakao_ad{
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.kakao_ad2{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.kakao_ad3{
+    margin: auto;
+    margin-top: 50px;
+    width: 320px;
+}
+.kakao_ad4{
+    margin: auto;
+    margin-top: 20px;
+    width: 320px;
+}
+.kakao_ad5{
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    margin: auto;
+    margin-top: 100px;
+    width: 320px;
+}
+
+/* 로딩 */
+.blur {
+    filter: blur(5px);
+}
+
+.analyze-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    background: transparent;    /* 미리 다른 배경 색상이 설정되어 있을 경우 filter 메서드와 충돌할 가능성이 있기 때문에 적용해준다. */
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-in;
+    /* ease-in: 처음에는 느리게, 끝에서는 빠르다 / 갑작 스럽습니다.
+    ease-out: 처음에는 빠르다 / 갑작스럽고 끝에서 느리게
+    ease-in: 물건이 움직일 때 .
+    ease-out: 상황이 이동하는 경우 에 . */
+    z-index: 1;
+    }
+
+.analyze-wrapper.open { 
+    opacity: 1;
+    visibility: visible;
+}
+
+.analyze {
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: -200px;
+    background: darkgray;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    border-radius: 20px;
+}
+    
+.analyze-wrapper.open .analyze {
+    margin-top: 50px;
+    opacity: 1;
+}
+
+.loading {
+        margin: 0 auto;
+        margin-top: 20px;
+}
+
+#loading_img{
+        /* border-top-left-radius: 20px;
+        border-top-right-radius: 20px; */
+        border-radius: 20px;
+        width: 350px;
+        height:250px;
+        object-fit: cover;
+}
+
+#spinner{
+        margin-top: 30px;
+}
+
+.loading-msg {
+        text-align: center;
+        font-size: 25px;
+        color: black;
+}
+
+@media screen and (max-width: 600px){
+    #test{
+        font-size: 20px;
+    }
+    #test_2{
+        font-size: 35px;
+    }
+    #test_3{
+        font-size: 15px;
+        margin-bottom:0px;
+    }
+    .start_button{
+        margin-top: 40px;
+        border-radius: 20px;
+        font-size: 30px;
+        width: 170px;
+        height: 70px;
+    }
+    .m_start_button{
+        border-radius: 20px;
+        font-size: 30px;
+        width: 170px;
+        height: 70px;
+    }
+    #jocoding{
+        width: 170px;
+    }
+    #title{
+        font-size: 16px;
+        width: 100%;
+    }
+    .question_bar{
+        margin-top: 50px;
+        width: 90%;
+        font-size: 13px;
+    }
+    .question_bar:hover{
+        width: 90%;
+    }
+    .question_bar_2{
+        margin-top: 20px;
+        width: 90%;
+        font-size: 13px;
+    }
+    .question_bar_2:hover{
+        width: 90%;
+    }
+    #MBTI{
+        font-size: 35px;
+        
+    }
+    #nickname{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    #champ{
+        font-size: 30px;
+    }
+    #img{
+        border-radius: 20px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        width: 90%;
+    }
+    #explain{
+        margin-top: 15px;
+        font-size: 11px;
+    }
+    #explain_last{
+        font-size: 20px;
+    }
+    #lines{
+        font-size: 20px;
+    }
+    #head_m_explain{
+        font-size: 30px;
+    }
+    #head_m_explain2{
+        font-size: 25px;
+    }
+    #head_m_explain3{
+        font-size: 20px;
+    }
+    #m_explain{
+        font-size: 13px;
+        width: 90%;
+    }
+    #m_explain_last{
+        font-size: 20px;
+    }
+    #add_image_head{
+        font-size: 30px;
+    }
+    .add_img img{
+        width: 25%;
+        height: 120px;
+    }
+    .share::before{
+        font-size: 25px;
+    }
+    .important{
+        width: 95%;
+        font-size: 11px;
+    }
+}
