@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,12 +20,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-d^-=9t(t=#b(wnhoa0x%*-v5ilctinye6*m6c0kd(m1#asnnpi'
+SECRET_KEY = os.environ.get(
+    'SECRET_KEY' , 'django-insecure-v_9xc_u12z_gp-a1_y8qn!2^meabmiy!o4k6&ld-th74sthd)4'
+)
+    
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG','True') != 'False')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +58,7 @@ ROOT_URLCONF = 'lionproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['lionproject/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,7 +123,29 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_DIRS = [
+    os.path.join(BASE_DIR, 'blog', 'static')
+] # 현재 static파일들이 어디에 있는지 경로를 표시
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') # static파일을 어디에 모을것인지
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #이용자가 업로드한 파일을 모으는 곳
+MEDIA_URL = '/media/' 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AWS_ACCESS_KEY_ID = os.environ.get(
+    'AWS_ACCESS_KEY_ID', 'AKIAR5A2FBHJG5WK2RNX'
+)
+
+AWS_SECRET_ACCESS_KEY = os.environ.get(
+    'AWS_SECRET_ACCESS_KEY', 'cjZQkT4gMXsBFpNqrbGBhdsGEIzbHBHKjL6C4Dcu'
+)
+
+AWS_STORAGE_BUCKET_NAME = os.environ.get(
+    'AWS_STORAGE_BUCKET_NAME', 'likelion-ideaton'
+)
