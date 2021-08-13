@@ -29,7 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-
+AUTH_USER_MODEL = "account.CustomUser" #세팅값을 바꿔주는 것만으로도 장고에서 제공되는 유저모델을 대체할 수 있다.
+                                        #makemigrations를 먼저해주고 setting.py와 urls.py에서 admin과 관련된 것을 잠깐 주석 처리해주고(from import도 해주어야함) migrate한 다음 주석을 풀어주어야한다. (아래 참고)
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blogapp.apps.BlogappConfig',
+    'account.apps.AccountConfig',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +59,7 @@ ROOT_URLCONF = 'myblogproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['myblogproject/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,11 +120,23 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
+# https://docs.djangoproject.com/en/3.2/howto/static-files/ #어떤식으로 static파일을 관리할것인지에 대한 공식문서
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'blogapp', 'static')
+] #현재 static파일들  이 어디에 있는지 경로를 작성해준것
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') #static 파일을 어디에 모을 것인지 적은것
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #이용자가 업로드한 파일을 모으는 곳
+MEDIA_URL = '/media/'
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

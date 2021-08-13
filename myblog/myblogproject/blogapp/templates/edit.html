@@ -1,0 +1,13 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<form action="{% url 'update' edit.id %}" method= "post">
+    {%csrf_token%} <!-- method가 post인경우 csrf공격을 예방하기 위해 사용하여야함-->
+    <p>제목 : <input type="text" name = "title" value = "{{edit.title}}"></p>
+    <p>작성자 : <input type="text" name = "writer" value = "{{edit.title}}"></p>
+    <p>본문 : <textarea name="body" id="" rows="10" cols="30"> {{edit.body}}</textarea></p>
+    <p>사진 : <input type="file" name="image"></p>
+    <button type="submit">submit</button>
+</form>
+{% endblock %}
+    

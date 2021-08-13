@@ -1,0 +1,45 @@
+<!-- html 문서를 새로 만들었으면 해당 html에서 처리될 기능을 views.py에 해당 기능을 구현하여야함.-->
+{% extends 'base.html' %} 
+
+{% block content %}
+    {%if user.is_authenticated %} 
+    <!-- {{user.username}} -->
+    {{user.location}}에 살고
+    {{user.university}}에 다니는
+    {{user.nickname}}님 안녕하세요! <!-- UserCreationForm대신 RegisterForm이란 임의로 만든  클래스로 대체-->
+    {% endif %}
+    <a href="?search=true&writer={{user.nickname}}">내가 쓴 글 보기</a>
+    <div class="new">
+        <a href="{% url 'new' %}">작성하기</a>
+    </div>
+    <h1>My blog project</h1>
+    
+    {% for blog in blogs %}
+    
+    {{blog.title}}
+    <div class="more">
+        <a href="{% url 'detail' blog.id %}">more</a>
+    </div>
+    
+    {% endfor %}
+
+        {% if blogs.has_previous %} 
+        <a href="?page=1">처음</a>
+        <a href="?page={{blogs.previous_page_number}}">이전</a>
+        {% endif %}
+
+        <span>{{blogs.number}}</span>
+        <span>of</span>
+        {% if blogs.number == 1 %}
+        <span>{{blogs.number}}</span>
+        {% endif %}
+        <span>{{blogs.paginator.num_page}}</span>
+
+        {% if blogs.has_next %} 
+        <a href="?page={{blogs.next_page_number}}">다음</a>>
+        <a href="?page={{blogs.paginator.num_pages}}">마지막</a>
+        {% endif %}
+        
+    
+{% endblock %} 
+<!-- 부트스트랩 JS -->

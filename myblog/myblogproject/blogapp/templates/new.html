@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Write your blog</h1>
+
+<form action="{% url 'create' %}" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    <!-- method가 post인경우 csrf공격을 예방하기 위해 사용하여야함-->
+    <!-- {{form}} -->
+    {{form.as_p}}
+    <button type="submit">submit</button>
+</form>
+{% endblock %}

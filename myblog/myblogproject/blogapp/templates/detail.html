@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>{{detail.title}}</p>
+<p>{{detail.writer}}</p>
+<p>{{detail.pub_date}}</p>
+<hr>
+{% if detail.image %}
+<p><img src="{{detail.image.url}}" alt=""></p>>
+{% endif %}
+<p>{{detail.body}}</p>
+<a href="{% url 'home' %}">홈으로</a>
+<a href="{% url 'edit' detail.id %}">수정하기</a>
+<a href="{% url 'delete' detail.id %}">삭제하기</a>
+{% endblock %}
